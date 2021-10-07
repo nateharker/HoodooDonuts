@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@model HomeViewModel
+
+<div class="left-side"></div>
+<div class="right-side"></div>
+<div class="donut-layer">
+    <img src="~/lib/originalglaze.png" height=300 style="position: absolute; left:35%; top:1%;" class="floating1"/>
+    <img src="~/lib/originalglaze.png" height=220 style="position: absolute; left:0%; top:65%;" class="floating2"/>
+    <img src="~/lib/originalglaze.png" height=280 style="position: absolute; left:55%; top:65%;" class="floating3"/>
+    <img src="~/lib/originalglaze.png" height=190 style="position: absolute; left:75%; top:35%;" class="floating4"/>
+</div>
+<div class="actual-content">
+    <div class="top-of-page">
+        <div class="logo-container">
+            <i class="fa-solid fa-circle-dot donut-logo"></i>
+            <div class="hoodoo-title">Hoodoo Fresh Donuts</div>
+        </div>
+        <div class="icon-container">
+            <i class="fa-brands fa-instagram-square social-icon"></i>
+            <i class="fa-brands fa-twitter-square social-icon"></i>
+            <i class="fa-brands fa-facebook-square social-icon"></i>
+            <i class="fa-brands fa-reddit-square social-icon"></i>
+            <i class="fa-brands fa-linkedin social-icon"></i>
+            <i class="fa-brands fa-kickstarter social-icon"></i>
+        </div>
+    </div>
+    <div class="center-of-page">
+        <svg viewBox="-50 0 100 100" class="rotating-text">
+            <path id="curve" d="m0 0a1 1 0 000 100a1 1 0 000-100" />
+            <text width="100">
+                <textPath xlink:href="#curve">
+                    World Famous • Made Fresh Daily since 2025 •
+                </textPath>
+            </text>
+        </svg>
+        <div class="text-inside-circle">
+            BUY NOW, YOU WON'T REGRET IT
+        </div>
+    </div>
+    
+    <a class="donut-page-button" asp-action="Donuts">
+        ORDER
+    </a>
+    <i class="fa-solid fa-chevron-down chevron1"></i>
+    <i class="fa-solid fa-chevron-down chevron2"></i>
+</div>
