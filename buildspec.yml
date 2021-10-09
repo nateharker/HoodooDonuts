@@ -3,7 +3,7 @@
 env:
   variables:
     PROJECT: HoodooDonuts
-    DOTNET_FRAMEWORK: 4.8
+    DOTNET_FRAMEWORK: 3.1
 phases:
   build:
     commands:
