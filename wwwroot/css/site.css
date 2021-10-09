@@ -69,6 +69,10 @@ html, body {
     background-color: #FFE6E8;
 }
 
+.xlong-background {
+    height: 475%;
+}
+
 .donut-layer {
     z-index: 1;
     position: absolute;
@@ -367,7 +371,7 @@ text {
     z-index: 1;
     background-color: white;
     width: 290px;
-    height: 290px;
+    height: 310px;
     margin-bottom: 30px;
     margin-right: 30px;
     padding: 10px;
