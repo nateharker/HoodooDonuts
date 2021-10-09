@@ -1,15 +1,15 @@
 ﻿version: 0.2
+
+env:
+  variables:
+    PROJECT: HoodooDonuts
+    DOTNET_FRAMEWORK: 4.8.4
 phases:
-  pre_build:
-    commands:
-      - echo Restore started on `date`
-      - dotnet restore HoodooDonuts.csproj
   build:
     commands:
-      - echo Build started on `date`
       - nuget restore
-      - dotnet publish -c release -o ./build_output HoodooDonuts.csproj
+      - msbuild $env:PROJECT.csproj /p:TargetFrameworkVersion=v$env:DOTNET_FRAMEWORK /p:Configuration=Release /p:DeployIisAppPath="Default Web Site" /p:PackageAsSingleFile=false /p:OutDir=C:\codebuild\artifacts\ /t:Package
 artifacts:
   files:
-    - ./**/*
-  base-directory: './build_output'
+    - '**/*'
+  base-directory: 'C:\codebuild\artifacts\_PublishedWebsites\${env:PROJECT}_Package\Archive\'

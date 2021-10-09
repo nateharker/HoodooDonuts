@@ -36,12 +36,14 @@ namespace HoodooDonuts.Controllers
                 donutList = _context.Donut
                 .Where(x => x.Type == type)
                 .ToList()
+                .OrderBy(x => x.Name)
                 .AsEnumerable();
             }
             else
             {
                 donutList = _context.Donut
                 .ToList()
+                .OrderBy(x => x.Name)
                 .AsEnumerable();
             }
 
